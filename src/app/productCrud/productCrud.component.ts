@@ -74,4 +74,5 @@ export class ProductCrudComponent implements OnInit {
     this.idproducts=0
 
   }
+  // private router: Router  / import { Router } from '@angular/router';
 }

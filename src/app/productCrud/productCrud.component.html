@@ -1,47 +1,55 @@
-
-<div  class="contreg">
   <div class="mensaje">
-    <h1>Informacion de tarjeta</h1>
-    <h5>
-      ingresa los datos del producto a modificar o eliminar
-    </h5>
+    <h1>Interaccion de tarjeta</h1>
   </div>
+<div  class="contreg">
+  <div class="contenido">
+      <div  class="card-deck">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Instrucciones</h5>
+            <p class="card-text">Crear: Para grear un nuevo producto, debes ingresar todos sus datos y dar clic en el boton Crear</p>
+            <p class="card-text">Modificar: Para modificar un producto, debes ingresar sus nuevos datos es decir si solo quieres cambiar un dato,
+              debes ingresar todos los datos del mismo cambiando el dato que deseas modificar, puesto que el producto viejo sera reemplazado,
+              por uno nuevo con tus modificaciones, lo unico que queda igual es el ID porque es el identificador del producto por ende si lo modificas creara uno nuevo.</p>
+            <p class="card-text">Eliminar: para elimiar un producto solo debes ingresar el numero de ID del producto que deseas eliminar y dar clic en el boron eliminar y listo </p>
+          </div>
+        </div>
+      </div>
+    <div class="form">
+      <div class="form-outline mb-4">
+        <label class="form-label bold" for="form5Example1">Nombre Completo</label>
+        <input type="text" name="name" class="form-control Nombre" [(ngModel)]="name" required minlength="1"  />
+      </div>
 
-  <div>
-    <div class="form-outline mb-4">
-      <label class="form-label bold" for="form5Example1">Nombre Completo</label>
-      <input type="text" name="name" class="form-control Nombre" [(ngModel)]="name" required minlength="1"  />
-    </div>
+      <div class="form-outline mb-4">
+        <label class="form-label bold" for="form5Example2">Numero ID producto</label>
+        <input type="number" id="form5Example" class="form-control email" [(ngModel)]="idproducts"  />
+      </div>
 
-    <div class="form-outline mb-4">
-      <label class="form-label" for="form5Example2">Numero ID producto</label>
-      <input type="number" id="form5Example" class="form-control email" [(ngModel)]="idproducts"  />
-    </div>
+      <div class="form-outline mb-4">
+        <label class="form-label bold" for="form5Example1">Inventario </label>
+        <input required maxlength="14" type="number" name="telefono" [(ngModel)]="inventory" class="form-control telefono" />
+      </div>
 
-    <div class="form-outline mb-4">
-      <label class="form-label" for="form5Example1">Inventario </label>
-      <input required maxlength="14" type="number" name="telefono" [(ngModel)]="inventory" class="form-control telefono"
-        placeholder="Ejemplo: 5731787" />
-    </div>
+      <div class="form-outline mb-4">
+        <label class="form-label bold" for="form5Example2">min</label>
+        <input type="number" id="form5Example2" class="form-control email" [(ngModel)]="min "  />
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label bold" for="form5Example2">max</label>
+        <input type="number" id="form5Example2" class="form-control email" [(ngModel)]="max"  />
+      </div>
 
-    <div class="form-outline mb-4">
-      <label class="form-label" for="form5Example2">min</label>
-      <input type="number" id="form5Example2" class="form-control email" [(ngModel)]="min "  />
+      <button type="submit" class="btn btn-primary btn-block mb-4" (click)="crear()">
+        Crear
+      </button>
+      <button type="submit" class="btn btn-primary btn-block mb-4" (click)="delete()">
+        borrar
+      </button>
+      <button type="submit" class="btn btn-primary btn-block mb-4" (click)="update()">
+        modificar
+      </button>
     </div>
-    <div class="form-outline mb-4">
-      <label class="form-label" for="form5Example2">max</label>
-      <input type="number" id="form5Example2" class="form-control email" [(ngModel)]="max"  />
-    </div>
-
-    <button type="submit" class="btn btn-primary btn-block mb-4" (click)="crear()">
-      Crear
-    </button>
-    <button type="submit" class="btn btn-primary btn-block mb-4" (click)="delete()">
-      borrar
-    </button>
-    <button type="submit" class="btn btn-primary btn-block mb-4" (click)="update()">
-      modificar
-    </button>
   </div>
 </div>
 
