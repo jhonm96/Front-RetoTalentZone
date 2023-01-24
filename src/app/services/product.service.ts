@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs';
 import { producto } from '../models/producto.model';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -21,4 +21,14 @@ createProduct(bodyFormulario : producto):Observable<producto> {console.log(bodyF
   );
 }
 
+deleteProduct(id:number):Observable<producto> {
+  return this.http.delete<producto>(`http://localhost:8080/delete/${id}`);
 }
+
+updateProduct(id:number,Formulario : producto):Observable<producto> {console.log(Formulario)
+  return this.http.put(`http://localhost:8080/update/${id}`,Formulario,{headers: new HttpHeaders({'Content-Type': 'application/json',}),}
+  );
+}
+}
+
+

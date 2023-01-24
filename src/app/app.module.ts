@@ -8,6 +8,7 @@ import { ProductCrudComponent } from './productCrud/productCrud.component';
 import { HistorialComprasComponent } from './historialCompras/historialCompras.component';
 import { CarritoComprasComponent } from './carritoCompras/carritoCompras.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    [FormsModule]
   ],
   providers: [],
   bootstrap: [AppComponent]

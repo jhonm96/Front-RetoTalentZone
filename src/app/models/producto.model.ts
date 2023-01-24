@@ -4,5 +4,6 @@ export interface producto {
   enabled?: string;
   min?: number;
   max?: number;
+  idproducts?: number;
 
 }
