@@ -1,0 +1,23 @@
+
+
+
+
+
+.card-deck{
+  display: flex;
+  padding: 50px;
+  background-image: url("https://image.winudf.com/v2/image/Y29tLnZuLmx5bHkucG9rZW1vbl9zY3JlZW5zaG90c18wX2EwOTQ3YjY/screen-0.jpg?fakeurl=1&type=.webp");
+
+
+}
+.card{
+  margin: 30px;
+}
+.card-img-top{
+  width: 300px;
+  height: 250px;
+}
+.card-body{
+  background-color: black;
+  color: aliceblue;
+}

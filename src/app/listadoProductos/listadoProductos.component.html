@@ -1,0 +1,41 @@
+<!-- <div class="hola" *ngIf="productos.length > 0">
+  <div *ngFor="let producto of productos">
+
+      <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{this.producto.name}}</h5>
+            <p class="card-text">{{this.producto.inventory}}, Unidades en stock, disponibilidad {{this.producto.enabled}},
+              {{this.producto.min}}, Cantidad minima de compra,{{this.producto.max}} cantidad maxima de compra</p>
+            <button  class="btn btn-primary">Editar</button>
+            <button  class="btn btn-primary">+</button>
+            <button  class="btn btn-secondary">Eliminar</button>
+          </div>
+        </div>
+
+
+
+  </div>
+
+</div> -->
+
+  <div class="card-deck" *ngIf="productos.length > 0" >
+    <div *ngFor="let producto of productos">
+      <div class="card">
+        <img class="card-img-top" src="https://wallpapers.com/images/hd/basic-pokeball-logo-l2nlbpz674dybbce.jpg" alt="Card image cap" >
+        <div class="card-body">
+          <h5 class="card-title">{{this.producto.name}}</h5>
+          <p class="card-text">Unidades en stock {{this.producto.inventory}}</p>
+          <p class="card-text">disponibilidad {{this.producto.enabled}}</p>
+          <p class="card-text">Cantidad minima de compra {{this.producto.min}}</p>
+          <p class="card-text">cantidad maxima de compra {{this.producto.max}}</p>
+        </div>
+        <div class="card-footer">
+          <button>modify</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

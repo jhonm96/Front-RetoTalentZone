@@ -1,0 +1,37 @@
+
+<div  class="contreg">
+  <div class="mensaje">
+    <h1>Informacion de tarjeta</h1>
+    <h5>
+      ingresa los datos del producto a modificar o eliminar
+    </h5>
+  </div>
+
+  <div>
+    <div class="form-outline mb-4">
+      <label class="form-label bold" for="form5Example1">Nombre</label>
+      <input type="text" name="name" class="form-control Nombre"  required minlength="1"  />
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form5Example1">Inventario </label>
+      <input required maxlength="14" type="number" name="telefono"  class="form-control telefono"
+        placeholder="Ejemplo: 5731787" />
+    </div>
+
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form5Example2">min</label>
+      <input type="number" id="form5Example2" class="form-control email"   />
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form5Example2">max</label>
+      <input type="event" id="form5Example2" class="form-control email"   />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block mb-4" (click)="crear()">
+      Crear
+    </button>
+  </div>
+</div>
+
+
