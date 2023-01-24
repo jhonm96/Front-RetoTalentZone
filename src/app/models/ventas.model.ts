@@ -1,4 +1,4 @@
-export interface producto {
+export interface ventas {
   idtype?: number;
   id?: number;
   clientName?: string;

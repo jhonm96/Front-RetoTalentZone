@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { producto } from '../models/producto.model';
+import { ventas } from '../models/ventas.model';
+import { SalesServices } from '../services/sales.service';
 
 @Component({
   selector: 'app-historialCompras',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistorialComprasComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private servicio : SalesServices
+  ) { }
 
   ngOnInit() {
+    this.getAll()
+  }
+
+  ventas!: ventas[];
+
+
+  getAll() {
+    this.servicio.getAllProducts().subscribe((ventas)=> {
+      this.ventas=ventas; console.log(this.ventas);})
   }
 
 }
