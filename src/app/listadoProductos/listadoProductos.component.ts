@@ -40,6 +40,9 @@ export class ListadoProductosComponent implements OnInit {
   updateredirect(){
     this.router.navigate(['crud']);
   }
+  historial(){
+    this.router.navigate(['historial']);
+  }
 
 
   id!: number;
