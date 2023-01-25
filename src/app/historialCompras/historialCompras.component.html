@@ -1,41 +1,21 @@
-<!-- <div class="cont">
-  <div class="content">
-    <h1>Historial de compras</h1>
-    <p-table [value]="ventas">
-      <ng-template pTemplate="header">
-        <tr>
-          <th>Fecha</th>
-          <th>Hora</th>
-          <th>tipo</th>
-          <th>monto</th>
-          <th>motivo</th>
-          <th>Origen.</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-historial>
-        <tr>
-          <td>
-            {{
-              historial.fecha.split(" ")[0] +
-                " " +
-                historial.fecha.split(" ")[1] +
-                " " +
-                historial.fecha.split(" ")[2] +
-                " " +
-                historial.fecha.split(" ")[3]
-            }}
-          </td>
-          <td>{{ historial.fecha.split(" ")[4] }}</td>
-          <td>{{ historial.valor > 0 ? "Deposito" : "Transferencia" }}</td>
-          <td>{{ historial.valor }}</td>
-          <td>{{ historial.motivo.descripcion }}</td>
-          <th>
-            <button >
-              boton
-            </button>
-          </th>
-        </tr>
-      </ng-template>
-    </p-table>
+<h1>Historial de Compras</h1>
+
+<div class="cont" *ngIf="ventas">
+  <div *ngFor="let producto of ventas">
+      <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">ID: {{producto.idclient}}</li>
+              <li class="list-group-item">Tipo de ID: {{producto.idtype}}</li>
+              <li class="list-group-item">Nombre del Cliente: {{producto.clientname}}</li>
+              <li class="list-group-item">Productos </li>
+              <div *ngFor="let productito of producto.products">
+              <li class="list-group-item">Producto Nombre: {{productito.idProduct   }}</li>
+              <li class="list-group-item">Cantidad: {{productito.quantity   }}</li>
+              </div>
+            </ul>
+          </div>
+        </div>
   </div>
-</div> -->
+
+</div>

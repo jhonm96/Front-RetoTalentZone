@@ -1,26 +1,8 @@
-<!-- <div class="hola" *ngIf="productos.length > 0">
-  <div *ngFor="let producto of productos">
-
-      <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{this.producto.name}}</h5>
-            <p class="card-text">{{this.producto.inventory}}, Unidades en stock, disponibilidad {{this.producto.enabled}},
-              {{this.producto.min}}, Cantidad minima de compra,{{this.producto.max}} cantidad maxima de compra</p>
-            <button  class="btn btn-primary">Editar</button>
-            <button  class="btn btn-primary">+</button>
-            <button  class="btn btn-secondary">Eliminar</button>
-          </div>
-        </div>
-
-
-
-  </div>
-
-</div> -->
-
+  <h1>
+    LISTA DE PRODUCTOS
+  </h1>
   <div class="card-deck" *ngIf="productos.length > 0" >
-    <div *ngFor="let producto of productos">
+    <div class="" *ngFor="let producto of productos">
       <div class="card">
         <img class="card-img-top" src="https://wallpapers.com/images/hd/basic-pokeball-logo-l2nlbpz674dybbce.jpg" alt="Card image cap" >
         <div class="card-body">
@@ -32,12 +14,78 @@
           <p class="card-text">cantidad maxima de compra: {{this.producto.max}} unid</p>
         </div>
         <div class="card-footer">
-          <button (click)="updateredirect()">modify</button>
-          <button (click)="carrito()">+</button>
+          <button class="btn  btn-block mb-4" (click)="updateredirect()">modificar</button>
+          <button class="btn  btn-block mb-4" (click)="agregarProductoCarro(this.producto.idproducts)"> + carrito</button>
         </div>
       </div>
     </div>
+</div>
+<div  class="contreg">
+  <div class="contenido">
+    <div class="carrito">
+      <h1>Carrito de compras</h1>
+      <div class="cartas" *ngIf="products">
+        <div *ngFor="let products of products">
+          <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">ID del producto: {{products.idProduct}} </h5>
+                <p class="card-text">Cantidad por comprar: {{products.quantity}}</p>
+                <button (click)=" quitarProductoCarrito(this.products.idProduct)" class="btn btn-secondary {{products.idProduct}}">eliminar</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    </div>
   </div>
+</div>
+
+<div class="formulario">
+
+
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form5Example1">Numero de ID </label>
+    <input type="number" id="form5Example2" class="form-control " [(ngModel)]="id "
+      placeholder="Ejemplo: 5731787" />
+  </div>
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form5Example2">Tipo de ID</label>
+    <input type="string" id="form5Example2" class="form-control " [(ngModel)]="idtype "  />
+  </div>
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form5Example2">Nombre del cliente</label>
+    <input type="string" id="form5Example2" class="form-control " [(ngModel)]="clientName "   />
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block mb-4" (click)="crearVenta()">
+    Crear
+  </button>
+</div>
+
+
+<!-- <h3>
+  Datos Necesarios para finalizar la compra:
+</h3>
+<div class="form">
+  <div class="form-outline mb-4">
+    <label class="form-label bold" for="form5Example1">Nombre Completo</label>
+    <input type="text" name="name" class="form-control Nombre" [(ngModel)]="clientName" required minlength="1"  />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label bold" for="form5Example1">Tipo de identificacion </label>
+    <input required maxlength="14" type="number" name="telefono" [(ngModel)]="idtype" class="form-control telefono" />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label bold" for="form5Example2">Numero ID </label>
+    <input type="number" id="form5Example" class="form-control email" [(ngModel)]="id"  />
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block mb-4" (click)="crearVenta()">
+    Crear
+  </button> -->
+
 
 
 

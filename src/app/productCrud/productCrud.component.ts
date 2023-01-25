@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { producto } from '../models/producto.model';
 import { ProductService } from '../services/product.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-productCrud',
@@ -74,5 +75,4 @@ export class ProductCrudComponent implements OnInit {
     this.idproducts=0
 
   }
-  // private router: Router  / import { Router } from '@angular/router';
 }

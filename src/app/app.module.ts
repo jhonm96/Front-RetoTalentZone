@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ListadoProductosComponent } from './listadoProductos/listadoProductos.component';
 import { ProductCrudComponent } from './productCrud/productCrud.component';
 import { HistorialComprasComponent } from './historialCompras/historialCompras.component';
-import { CarritoComprasComponent } from './carritoCompras/carritoCompras.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 
@@ -15,8 +14,8 @@ import { FormsModule } from '@angular/forms'
     AppComponent,
       ListadoProductosComponent,
       ProductCrudComponent,
-      HistorialComprasComponent,
-      CarritoComprasComponent
+      HistorialComprasComponent
+
    ],
   imports: [
     BrowserModule,

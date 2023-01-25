@@ -2,7 +2,18 @@
 .card-deck{
   display: flex;
   padding: 50px;
-
+  overflow: scroll;
+}
+.cartas{
+  min-width: 70vw;
+}
+h1{
+  text-align: center;
+  color: aliceblue;
+}
+h3{
+  text-align: center;
+  color: aliceblue;
 }
 .card{
   margin: 30px;
@@ -20,5 +31,26 @@
   display: flex;
 }
 button{
+  background-color: rgba(0, 0, 0, 0.509);
   margin: 10px;
+  color: aliceblue;
 }
+.carrito{
+  min-width: 30vw;
+  color: aliceblue;
+}
+.cartas{
+  display: flex;
+  overflow: scroll;
+}
+.form-label{
+  color: aliceblue;
+}
+.form{
+  padding:60px
+}
+
+
+
+
+

@@ -23,7 +23,7 @@ export class HistorialComprasComponent implements OnInit {
 
 
   getAll() {
-    this.servicio.getAllProducts().subscribe((ventas)=> {
+    this.servicio.getAllSales().subscribe((ventas)=> {
       this.ventas=ventas; console.log(this.ventas);})
   }
 

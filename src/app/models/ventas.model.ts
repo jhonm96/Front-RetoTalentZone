@@ -1,6 +1,8 @@
+import { productoCarrito } from "./productoCarrito.model";
+
 export interface ventas {
-  idtype?: number;
-  id?: number;
-  clientName?: string;
-  motivo: { idProduct: string; quantity: string };
+  idtype?: string;
+  idclient?: number;
+  clientname?: string;
+  products?: productoCarrito[];
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarritoComprasComponent } from './carritoCompras/carritoCompras.component';
+import { HistorialComprasComponent } from './historialCompras/historialCompras.component';
 import { ListadoProductosComponent } from './listadoProductos/listadoProductos.component';
 import { ProductCrudComponent } from './productCrud/productCrud.component';
 
@@ -12,9 +12,9 @@ const routes: Routes = [
     path: 'crud',
     component: ProductCrudComponent,
 },
-  {
-    path: 'carritoCompras',
-    component: CarritoComprasComponent,
+{
+  path: 'historial',
+  component: HistorialComprasComponent,
 }
 ];
 
