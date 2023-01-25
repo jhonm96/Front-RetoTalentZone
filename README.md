@@ -9,7 +9,7 @@ una vez alli vera la pagina principal en la cual si no hay productos creados, de
 
 ## Compras
 
-para realizar ocmpras debes agregar productos y sus cantidades al carrito luego diligenciar el formulario con tus datos y car clic en comprar y listo, podras ver el registro de tus compras realizadas en el boton historial de compras.
+para realizar compras debes agregar productos y sus cantidades al carrito luego diligenciar el formulario con tus datos y car clic en comprar y listo, podras ver el registro de tus compras realizadas en el boton historial de compras.
  
 ### pruebas
 puedes correr el comando `ng test` para ejecutar las pruebas unitarias a través de Karma 
