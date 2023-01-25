@@ -17,6 +17,9 @@ h3{
 }
 .card{
   margin: 30px;
+  box-shadow: 3px 3px 15px  rgb(146, 203, 146);
+  background-color: rgba(0, 0, 0, 0);
+
 }
 .card-img-top{
   width: 300px;
@@ -25,6 +28,7 @@ h3{
 .card-body{
   background-color: rgba(0, 0, 0, 0.861);
   color: aliceblue;
+
 }
 .card-footer{
   background-color: rgba(0, 0, 0, 0.487);

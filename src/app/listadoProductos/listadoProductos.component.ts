@@ -40,9 +40,6 @@ export class ListadoProductosComponent implements OnInit {
   updateredirect(){
     this.router.navigate(['crud']);
   }
-  carrito(){
-    this.router.navigate(['carritoCompras']);
-  }
 
 
   id!: number;
@@ -64,36 +61,36 @@ export class ListadoProductosComponent implements OnInit {
 
 
   }
-  agregarProductoCarro(id: any) {
+  agregarProductoCarro(productName: any) {
     var cantidadASumarAlCarro = prompt(
       'Ingrese la cantidad que desea comprar de este producto'
     );
 
     var datoFormateado = parseInt(cantidadASumarAlCarro!);
 
-    const productoASumar: productoCarrito = {
-      idProduct: id,
+    const productoalcarrito: productoCarrito = {
+      productName: productName,
       quantity: datoFormateado,
     };
 
     let key: boolean = false;
 
-    this.products.forEach((productito) => {
-      if (productito.idProduct === id) {
+    this.products.forEach((productocompra) => {
+      if (productocompra.productName === productName) {
         if (true) {
           key = true;
-          productito.idProduct = id;
-          productito.quantity = datoFormateado;
+          productocompra.productName = productName;
+          productocompra.quantity = datoFormateado;
         }
       }
     });
     if (key == false) {
-      this.products.push(productoASumar);
+      this.products.push(productoalcarrito);
       key = false;
     }
   }
   quitarProductoCarrito(id: any) {
-    let indice = this.products.filter(elemento => elemento.idProduct != id)
+    let indice = this.products.filter(elemento => elemento.productName != id)
     this.products = indice
     console.log(this.products)
 

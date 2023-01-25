@@ -1,6 +1,10 @@
-  <h1>
+  <div>
+    <h1>
     LISTA DE PRODUCTOS
   </h1>
+  <button class="btn btn-primary  btn-block mb-4"(click)="updateredirect()">Crear Producto</button>
+  </div>
+
   <div class="card-deck" *ngIf="productos.length > 0" >
     <div class="" *ngFor="let producto of productos">
       <div class="card">
@@ -14,8 +18,8 @@
           <p class="card-text">cantidad maxima de compra: {{this.producto.max}} unid</p>
         </div>
         <div class="card-footer">
-          <button class="btn  btn-block mb-4" (click)="updateredirect()">modificar</button>
-          <button class="btn  btn-block mb-4" (click)="agregarProductoCarro(this.producto.idproducts)"> + carrito</button>
+          <button class="btn btn-primary  btn-block mb-4" (click)="updateredirect()">modificar</button>
+          <button class="btn btn-primary  btn-block mb-4" (click)="agregarProductoCarro(this.producto.name)"> + carrito</button>
         </div>
       </div>
     </div>
@@ -28,9 +32,9 @@
         <div *ngFor="let products of products">
           <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">ID del producto: {{products.idProduct}} </h5>
-                <p class="card-text">Cantidad por comprar: {{products.quantity}}</p>
-                <button (click)=" quitarProductoCarrito(this.products.idProduct)" class="btn btn-secondary {{products.idProduct}}">eliminar</button>
+                <h5 class="card-title">Nombre del producto: {{products.productName}} </h5>
+                <p class="card-text">Cantidad : {{products.quantity}}</p>
+                <button (click)=" quitarProductoCarrito(this.products.productName)" class="btn btn-secondary {{products.productName}}">eliminar</button>
             </div>
           </div>
       </div>
@@ -40,13 +44,16 @@
   </div>
 </div>
 
-<div class="formulario">
 
 
+<div class="form">
+  <h3>
+    Datos Necesarios para finalizar la compra:
+  </h3>
   <div class="form-outline mb-4">
     <label class="form-label" for="form5Example1">Numero de ID </label>
-    <input type="number" id="form5Example2" class="form-control " [(ngModel)]="id "
-      placeholder="Ejemplo: 5731787" />
+    <input type="" id="form5Example2" class="form-control " [(ngModel)]="id "
+       />
   </div>
   <div class="form-outline mb-4">
     <label class="form-label" for="form5Example2">Tipo de ID</label>
@@ -62,29 +69,6 @@
   </button>
 </div>
 
-
-<!-- <h3>
-  Datos Necesarios para finalizar la compra:
-</h3>
-<div class="form">
-  <div class="form-outline mb-4">
-    <label class="form-label bold" for="form5Example1">Nombre Completo</label>
-    <input type="text" name="name" class="form-control Nombre" [(ngModel)]="clientName" required minlength="1"  />
-  </div>
-
-  <div class="form-outline mb-4">
-    <label class="form-label bold" for="form5Example1">Tipo de identificacion </label>
-    <input required maxlength="14" type="number" name="telefono" [(ngModel)]="idtype" class="form-control telefono" />
-  </div>
-
-  <div class="form-outline mb-4">
-    <label class="form-label bold" for="form5Example2">Numero ID </label>
-    <input type="number" id="form5Example" class="form-control email" [(ngModel)]="id"  />
-  </div>
-
-  <button type="submit" class="btn btn-primary btn-block mb-4" (click)="crearVenta()">
-    Crear
-  </button> -->
 
 
 

@@ -10,7 +10,7 @@
   align-items: center;
 }
 .form-label {
-  color:rgb(185, 185, 185) ;
+  color:rgb(224, 219, 219) ;
 }
 
 h5 {
@@ -22,7 +22,7 @@ h5 {
 
 h1 {
   font-weight: bold;
-  color:rgb(185, 185, 185) ;
+  color:rgb(225, 217, 217) ;
   text-align: center;
 }
 
@@ -33,30 +33,33 @@ h1 {
 
 
 }
-
+button{
+  background-color: rgba(0, 0, 0, 0.861);
+}
 .mensaje {
   width: 100%;
   padding: 15px;
   font-size: large;
   font-family: Verdana;
   text-align: justify;
-
-
 }
 
 .contenido{
 display: flex;
 align-items: center;
+
 }
 .card{
   margin: 50px;
   height:600px;
   width: 600px;
+  box-shadow: 3px 3px 15px  rgb(146, 203, 146);
+  background-color: rgba(0, 0, 0, 0.861);
 }
 
 .card-body{
-  background-color: rgba(0, 0, 0, 0.861);
   color: aliceblue;
+  border-radius: 15px;
 }
 
 
